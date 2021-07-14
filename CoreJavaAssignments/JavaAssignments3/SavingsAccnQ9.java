@@ -9,8 +9,8 @@ class SavingsAccount implements Comparable<SavingsAccount>{
 	 String accHolderName;
 	 @Override
 	public String toString() {
-		return "SavingsAccount [acc_bal=" + acc_bal + ", acc_Id=" + acc_Id + ", accHolderName=" + accHolderName
-				+ ", isSalAcc=" + isSalAcc + "]";
+		return "acc_bal=" + acc_bal + ", acc_Id=" + acc_Id + ", accHolderName=" + accHolderName
+				+ ", isSalAcc=" + isSalAcc + "\n";
 	}
 
 	Boolean isSalAcc;
@@ -70,7 +70,30 @@ class SavingsAccount implements Comparable<SavingsAccount>{
 	}
 	
 }
+////////////////////////////////////////////////////////////////////////////////////
+class BankAccList{
+	
+	Set <SavingsAccount> BankAccList = new TreeSet<>();
 
+	public void setBankAccList(SavingsAccount sav) {
+		this.BankAccList.add(sav);
+		
+		
+	}
+
+	@Override
+	public String toString() {
+		return "" + BankAccList+"\n";
+	}
+
+	public Iterator<SavingsAccount> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+		
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
 public class SavingsAccnQ9 {
 
 	public static void main(String[] args) {
@@ -87,25 +110,19 @@ public class SavingsAccnQ9 {
 		System.out.println(sav1.getAcc_bal());
 		System.out.println(sav2.getAcc_bal());
 
-		Set <SavingsAccount> BankAccList = new TreeSet<>();
+//		Set <SavingsAccount> BankAccList1 = new TreeSet<>();
 		
-		BankAccList.add(sav5);
-		BankAccList.add(sav4);
-		BankAccList.add(sav3);
-		BankAccList.add(sav2);
-		BankAccList.add(sav1);
+		BankAccList BankAccList1 = new BankAccList();
+		
+		BankAccList1.setBankAccList(sav1);
+		BankAccList1.setBankAccList(sav2);
+		BankAccList1.setBankAccList(sav3);
+		BankAccList1.setBankAccList(sav4);
+		BankAccList1.setBankAccList(sav5);
 		
 		
-//		for(SavingsAccount sav: BankAccList) {
-//			
-//			System.out.println(BankAccList);
-//
-//			
-//		}
-		Iterator<SavingsAccount> it = BankAccList.iterator();
-		while(it.hasNext()) {
-			System.out.println(it.next());
-		}
+		
+			System.out.print(BankAccList1);
 	
 
 	}
