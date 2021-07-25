@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+   <bean id="AnnoBankAccount" class="SpringQ4.AnnoBankAccount" name="account">
+  
+  <constructor-arg name="accountId" value="1234"></constructor-arg> 
+  <constructor-arg name="accountHolderName" value="Saban"/>
+  <constructor-arg name="accountType" value="savings"/>
+  <constructor-arg name="accountBalance" value="10000"/>
+  
+  </bean>
+  <!-- 
+  <bean  class="SpringQ4.AnnoBankAccountRepositoryImpl" name="repo" autowire="byType">
+  
+  </bean>
+  
+  <bean  class="SpringQ4.AnnoBankAccountServiceImpl" name="service" autowire="byName">
+    
+  </bean>
+    <bean  class="SpringQ4.AnnoBankAccountController" name="controller" autowire="constructor">
+    
+  </bean>
+  
+   -->
+</beans>

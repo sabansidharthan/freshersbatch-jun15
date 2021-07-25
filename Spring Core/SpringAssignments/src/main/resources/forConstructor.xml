@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+ 
+  <bean id="customer" class="SpringQ1.Customer">
+  <constructor-arg  name="customerId" value = "900778"/>
+    <constructor-arg name="customerName" value = "Tom"/>
+    <constructor-arg name="customerContact" value = "900778738"/>
+    <constructor-arg name="customerAdd" ref = "address"/>
+  </bean>
+  
+  <bean id="address" class="SpringQ1.Address">
+  <constructor-arg name = "street" value= "Attingal"/>
+  <constructor-arg name = "city" value= "Trivandrum"/>
+  <constructor-arg name = "state" value= "Kerala"/>
+  <constructor-arg name = "country" value= "India"/>
+<!-- collaborators and configuration for this bean go here -->
+  </bean>
+
+  <!-- more bean definitions go here -->
+
+</beans>

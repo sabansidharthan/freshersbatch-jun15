@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="questionMap" class="SpringQ2.QuestionMap">
+  <property name="questionId" value = "101"></property>
+    <property name="question" value = "Favourite places??"></property>
+    <property name="answers">
+    <map>
+    	<entry key="1" value="Kerala" />
+    	<entry key="2" value="Mumbai" />
+    	<entry key="3" value="Paris" />
+    	<entry key="4" value="New Zealand" />
+    </map>
+    </property>
+    <!-- collaborators and configuration for this bean go here -->
+  </bean>
+  <!-- more bean definitions go here -->
+</beans>

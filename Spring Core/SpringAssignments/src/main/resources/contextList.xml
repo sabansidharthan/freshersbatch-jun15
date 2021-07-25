@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="questionList" class="SpringQ2.QuestionList">
+  <property name="questionId" value = "101"></property>
+    <property name="question" value = "Favourite places??"></property>
+    <property name="answers">
+    <list>
+    	<value>"Kerala"</value>
+        <value>"Mumbai"</value>
+        <value>"Paris"</value>
+        <value>"New Zealand"</value>
+    </list>
+    </property>
+    <!-- collaborators and configuration for this bean go here -->
+  </bean>
+
+</beans>
